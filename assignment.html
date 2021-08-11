@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ 
+<!-- If IE use the latest rendering engine -->
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--RESPONSIVE--> 
+<!-- Set the page to the width of the device and set the zoon level -->
+       <meta name="viewport" content="width = device-width, initial-scale = 1">
+<!--CSS-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+<!--JAVASCRIPT-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>forum</title>
+    <link rel="stylesheet" href=" https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+
+<!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">   
+<style>
+body
+    {
+            background:url('images/9975942.webp') no-repeat;
+            background-size:cover;
+            height:100%;
+            width:100%;
+            background: white;
+    }
+#heading
+        {
+            opacity:0.5;
+            font-family:"times in new roman";
+            font-size:40; 
+            color:black;
+            text-decoration-style:wavy;
+            text-decoration-color:"black";
+        }
+        
+#logo
+        {
+            margin-left:5px;
+            margin-top:auto;
+        }
+        
+topnav container
+    {
+    width:100%;
+    height:80px;
+    background-color:white;
+    opacity:.8;
+    margin-bottom:0px;
+    position: relative;
+    color:black;
+    
+   }
+ul
+    {
+    /*margin-left:100px;*/
+    align-items: center;
+    padding:0px;
+    list-style:none;
+    text-align:center;
+    color:black;
+    align-content: center;
+        
+    }
+ul.bars
+        {
+            margin-left:110px;
+            margin-top:0px;
+        }
+ul li{
+    float:left;
+    width:200px;
+    height:60px;
+    background-color:white;
+    line-height:40px;
+    text-align: center;
+    font-size:20px;
+    }
+ul li a
+    {
+    text-decoration:none;
+    display:block;
+    }
+        
+ul li a:hover
+    {
+            background-color:black;
+            color:white;
+            opacity:.8;
+    }
+        
+ul li ul li
+        {
+            display: none;
+            background-color: aqua;
+            color:black;
+            opacity:.10;
+        }
+ul li:hover ul li
+        {
+            display:block
+        }
+.banner
+        {
+            position:relative;
+            width:95%;
+            margin:0 auto;
+            top:80%;
+        }
+.banner img
+        {
+            width:90%;
+            height:550px;
+            top:80%;
+            max-width:100%;
+        }
+.banner .image-heading
+        {
+            color:white;
+            position:absolute;
+            top:30%;
+            width: 100%;
+            text-align:center;
+            text-shadow:3px 5px 10px purple;
+            font-size:50;
+            text-emphasis:bold;
+            text-emphasis-color: black;
+        }
+.banner .shop12
+        {
+            position:absolute;
+            background:white;
+            color:black;
+            height:50px;
+            width:150px;
+            font-weight:200;
+            top:60%;
+            right:45%;
+            border:none;
+            font-size:15px;
+            padding:15px;
+            cursor:pointer;
+        }
+.banner .shop12:hover
+        {
+            background-color:black;
+            color:white;
+        }
+
+.footer {
+  background: #303036;
+  color: #d3d3d3;
+  height: 400px;
+  position: relative;
+float: left;
+    width:100%;
+}
+
+.footer .footer-content {
+  height: 300px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+  color: white;
+}
+
+.footer .footer-content .about h1 span {
+  color: #05f7ff;
+}
+
+.footer .footer-content .about .contact span {
+  display: block;
+  font-size:2px;
+  margin-bottom:8px;
+}
+
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+  border: 1px solid white;
+  color: white;
+  transition: all .3s;
+}
+
+.footer .footer-content .links .foot a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  transition: all .3s;
+}
+
+.footer .footer-content .links .foot a:hover {
+  color: white;
+  margin-left:15px;
+  transition: all .3s;
+}
+
+.footer .footer-content .contact-form .contact-input {
+  background: #272727;
+  color: #bebdbd;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  padding: .9rem 1.4rem;
+  border: none;
+}
+
+.footer .footer-content .contact-form .contact-input:focus {
+  background: #1a1a1a;
+}
+
+.footer .footer-content .contact-form .contact-btn {
+  float:center;
+  font-size: 1.1em;
+  font-family: 'Lora', serif;
+background-color:grey;
+}
+
+.footer .footer-bottom {
+  background: #343a40;
+  color: #686868;
+  height:50px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+}
+.contact ul li
+        {
+            top:60%;
+        }
+
+ .page-wrapper
+        {
+            min-height:350%;
+        }
+        .columns:hover{}
+/*
+.post-slider .post-wraper
+        {
+            border:1px dashed blue;
+            width:84%;
+            height:250px;
+            margin 0px ;
+            overflow: hidden;
+        }
+*/
+/*
+.post-slider .post-wraper .post
+        {
+            background:pink;
+            display:inline-block;  display horizontally images
+            width:300px;
+            height:250px;
+            margin:0px 10px;
+            opacity:.9;
+*/
+            
+.post-slider .carousel
+        {
+            width:84%;
+            height:250px;
+            margin:0x;
+            overflow:hidden;
+            position:relative;
+/*
+            border-radius: 15px 15px 15px 15px;
+            overflow: hidden;
+*/
+           
+        }
+.post-slider .carousel .post
+        {
+            width:300px;
+            height:250px;
+            margin:0px 10px;
+            border-radius: 15px 15px 15px 15px;
+            overflow: hidden;
+            transition: width 2s, height 4s;
+        }
+.post:before
+        {
+            display:inline-flex;
+            margin:0px 10px;
+        }
+ .post:hover
+{
+width: 400px;
+height: 400px;
+/*transition: width 2s, height 4s;*/
+transform:scale(0.8,0.8);
+/*object-fit:fill;*/
+}
+.scrunchie1
+        {
+            display:flex;
+            margin-left:100px;
+            align-items:center;
+            
+        }
+.img_scrunchie
+        {
+            flex-basis:50%;
+            left:5%;
+            border-radius:15px;
+        }
+.slogan_scrunchie
+{
+            top:30%;
+            left:30%;
+    font-family:helvetica;
+}
+.explore
+        {
+            position:relative;
+            background:lightblue;
+            color:black;
+            height:50px;
+            width:150px;
+            font-weight:200;
+            border:none;
+            font-size:15px;
+            padding:15px;
+            cursor:pointer;   
+        }
+.explore:hover{
+            background:black;
+            color:aliceblue;
+        }
+.post .image_content
+        {
+            color:white;
+            position:absolute;
+            top:1%;
+            left:7%;
+            text-shadow:5px 5px 10px yellow;
+            font-size:20;
+            text-emphasis:bold;
+            text-emphasis-color:black;
+        }
+.post .image2_content
+        {
+            color:white;
+            position:absolute;
+            top:1%;
+            left:7%;
+            text-shadow:5px 5px 10px black;
+            font-size:20;
+            text-emphasis:bold;
+            text-emphasis-color:black;
+        }
+        .post .image1_content
+        {
+            color:white;
+            position:absolute;
+            top:1%;
+            left:12%;
+            text-shadow:5px 5px 10px yellow;
+            font-size:20;
+            text-emphasis:bold;
+            text-emphasis-color:black;
+        }
+.post .image3_content
+        {
+            color:white;
+            position:absolute;
+            top:1%;
+            left:4%;
+            text-shadow:5px 5px 10px black;
+            font-size:20;
+            text-emphasis:bold;
+            text-emphasis-color:black;
+        }
+</style>
+</head>
+    
+    
+    
+<body>
+
+
+
+<div data-section-id="header" data-section-type="header-section" data-header-section>
+  
+    
+      <style>
+        .announcement-bar {
+        background-color: black;
+        text-align:center;
+        position:sticky;
+        top:0;
+        z-index: 1;
+        width:100%;
+/*            max-width:1170px;*/
+        height:80%;
+        
+        }
+
+        .announcement-bar--link:hover {
+        background-color: #ce9dbe;
+          
+        }
+
+        .announcement-bar__message {
+          color:#fff;
+            font-size: 20px;
+        }
+      </style>
+<div class="announcement-bar">
+   <p class="announcement-bar__message">Welcome to HOME FITNESS club !!<br></p>
+</div>
+<header>
+<div class="header1">
+<img id="logo"src="H.jpg" align=left height=120px width=120px>
+
+<center>
+    <nav align=left>
+    <div class="topnav container">
+          <center>
+          <ul class="bars">
+              <font size=1px>
+          <li><a class="active" href="#home"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16" width=20 height=20>
+  <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+  <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+  <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+</svg><br>LIVE</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+  <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+</svg><br>MEMBERSHIPS</a>
+        <li><a href="#contact"><img class="running" src="images/running.png" height=30 width=30><br>PLANS</a>
+        <li><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+  <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+</svg><br>MORE</a></li>
+        <li><a href="/account/login" class="site-header__icon site-header__account" title="Log In">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg><br>Login</a></li>
+              </font>
+                  </ul>
+        </center>
+        </div>
+    </nav>
+    
+    </center>
+    </div>
+    </header>
+
+        
+        
+<!-- page wrapper-->
+   <br>
+ <div class="page-wrapper" >
+     <!--post slider-->
+        <div class="post-slider">
+        
+            <br>
+            <br>
+            <br>
+            <div class="festive-tab">
+            <div class="row">
+                <div class="banner">
+                    <center>
+                        <img src="images/young-blonde-woman-sportswear-is-doing-yoga-mat.jpg"></center>
+                    <h1 class="image-heading"><b> HUSTLE!<br>
+                        DO IT NOW !!
+                        </b>
+                    </h1>
+                    <input class="shop12" type="button" name="shop1" value="Register Now" onclick="window.location.href='cart.html';">
+            </div>
+            </div>
+        </div>
+            
+            <br>
+            <center>
+                <font size=6><b>Runner's Workout</b></font>
+                <br>
+                <br>
+            <div class="carousel" data-flickity='{"wrapAround":true, "autoPlay":true}'>
+                <div class="post">
+                    <img src="images/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-his-upper-body-concept-healthy-lifestyle-sport-fitness-bodybuilding-wellbeing.jpg" height=300 width=350>
+                <div class="image1_content">
+                    <h2>STRENGTH</h2></div>
+                </div>
+                <div class="post"><img src="images/motivation-young-caucasian-bodybuilder-training-studio-background-neon-light-muscular-male-model-with-ball-concept-sport-bodybuilding-healthy-lifestyle-motion-action.jpg" height=300 width=350>
+                    <div class="image2_content">
+                    <h2>STAMINA</h2></div>
+                </div>
+                <div class="post"><img src="images/young-beautiful-sportive-girl-training-with-dumbbells-dark-wall.jpg" height=300 width=350>
+                <div class="image_content">
+                    <h2>DRILLS</h2></div>
+                </div>
+                <div class="post"><img src="images/sporty-young-woman-doing-yoga-practice-isolated-concept-healthy-life-natural-balance-body-mental-development.jpg" height=300 width=350>
+                    <div class="image3_content">
+                    <h2>MOBILITY</h2></div>
+                </div></div>
+                
+                
+                </center>
+        
+     <br><br><br><br>
+     <div class="container">
+     <div class="scrunchie1">
+         <div class="img_scrunchie">
+             <img src="images/active-woman-being-full-energy-jumps-high-air-wears-sportsclothes-prepares-sport-competitions.jpg" class="img-circle" alt="Cinque Terre" width="300" height="300"> 
+             </div>
+            <div class="slogan_scrunchie">
+                <center>
+                <font color=black size=6>
+                    Work Out At Home For Free.</font></center>
+                <br>
+                <font size=4 align=center face="serif">
+                    <p align=center left-margin=20>
+                        We believe fitness should be accessible to everyone, everywhere,<br> regardless of income or access to a gym.<br> With hundreds of professional workouts, healthy recipes and <br>informative articles,as well as one of the most positive communities <br>on the web,you’ll have everything you need to reach your personal fitness goals – for free!</p></font>
+                <br><center>
+                <input class="explore" type="button" name="shop1" value="JOIN NOW" onclick="window.location.href='cart.html';"></center></div>
+     </div>
+
+<!--footer-->
+         <br>
+         <br>
+<div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Health</span>Fitness</h1>
+        <p><font size=3>
+          Health Fitness is a fitness website conceived for the good health of people.
+          However, This page is created by rhythm.
+            </font></p>
+        <div class="contact">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+</svg> 123-456-789<br>
+       <a href=".com">   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+           </svg> healthfitness.com</a>
+        </div>
+          <br>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+          <a href="#">
+        Events
+          </a><br><br>
+          <a href="#">
+            Team
+          </a><br><br>
+          <a href="#">
+            Mentores
+          </a><br><br>
+          <a href="#">
+            Gallery
+          </a><br><br>
+          <a href="#">
+            Terms and Conditions
+          </a>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Contact us</h2>
+        <br>
+        <form action="index.html" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+          <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+          <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; healthfitness.com | Designed by Rhythm
+    </div>
+  </div>
+    
+    <!--jquery-->
+    <script src="href://cdnjs.cloudflare.com/ajax/libs/jquesry/3.4.1/css/jquery.min.js"></script>
+       <!--slick source-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+         <!--custom Script-->
+         <script src="scripts.js"></script>
+    
+    <script>
+  $(document).ready(function() {
+$("button").addClass("animated bounce");
+  });
+</script>
+<script src="app.js"></script>
+    </body>
+</html>
+            
+
+ 
+
+
+
